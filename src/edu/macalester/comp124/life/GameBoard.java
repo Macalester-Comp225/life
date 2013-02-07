@@ -108,16 +108,16 @@ public class GameBoard {
     public void save(File file) throws IOException {
         DataOutputStream data = new DataOutputStream(new FileOutputStream(file));
         try {
-	        data.writeInt(boardWidth);
-	        data.writeInt(boardHeight);
-	        
-	        for (int y = 0; y < boardHeight; y++) {
-	            for (int x = 0; x < boardWidth; x++) {
-	                data.writeBoolean(getCell(x, y));
-	            }
-	        }
+            data.writeInt(boardWidth);
+            data.writeInt(boardHeight);
+            
+            for (int y = 0; y < boardHeight; y++) {
+                for (int x = 0; x < boardWidth; x++) {
+                    data.writeBoolean(getCell(x, y));
+                }
+            }
         } finally {
-        	data.close();
+            data.close();
         }
     }
     

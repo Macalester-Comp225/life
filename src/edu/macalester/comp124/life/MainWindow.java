@@ -267,7 +267,7 @@ public class MainWindow extends JFrame
             if (b.getActionCommand().equals("conway")) {
                 board.setRuleSet(new Conway());
             } else {
-            	// Uncomment for HighLife
+                // Uncomment for HighLife
                 // board.setRuleSet(new HighLife());
             }
         }
