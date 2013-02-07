@@ -16,7 +16,7 @@ public class LifeComponent extends JComponent {
         
     private static final int CELL_SIZE = 5;
     private static final int GUTTER_SIZE = 1;
-
+    
     private GameBoard board;
     private Set<Point> foundCells = new HashSet<Point>();
     
@@ -90,7 +90,7 @@ public class LifeComponent extends JComponent {
             return;     // refuse to paint a null board
         
         Graphics2D g2 = (Graphics2D) g;
-        g2.setPaint(Color.BLUE);
+        g2.setPaint(Color.WHITE);
         int bw = cellDistance(board.getWidth());
         int bh = cellDistance(board.getHeight());
         for (int x = 0; x < bw; x += CELL_SIZE + GUTTER_SIZE) {
